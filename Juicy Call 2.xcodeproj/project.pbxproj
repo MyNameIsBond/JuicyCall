@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA905B2C2502836800126C56 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA905B2B2502836800126C56 /* NavigationView.swift */; };
+		EA905B2E2502837E00126C56 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA905B2D2502837E00126C56 /* MenuModel.swift */; };
+		EA905B2F2502837E00126C56 /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA905B2D2502837E00126C56 /* MenuModel.swift */; };
+		EA905B3525028AFF00126C56 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA905B3425028AFF00126C56 /* CustomImageView.swift */; };
+		EA905B3625028AFF00126C56 /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA905B3425028AFF00126C56 /* CustomImageView.swift */; };
+		EA905B3B25028EA900126C56 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA905B3A25028EA900126C56 /* BlurView.swift */; };
 		EAA2EA092502486D00B9136C /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2EA082502486D00B9136C /* Tests_iOS.swift */; };
 		EAA2EA142502486D00B9136C /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2EA132502486D00B9136C /* Tests_macOS.swift */; };
 		EAA2EA162502486D00B9136C /* Juicy_Call_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA2E9ED2502486C00B9136C /* Juicy_Call_2App.swift */; };
@@ -35,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA905B2B2502836800126C56 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
+		EA905B2D2502837E00126C56 /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		EA905B3425028AFF00126C56 /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		EA905B3A25028EA900126C56 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		EAA2E9ED2502486C00B9136C /* Juicy_Call_2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Juicy_Call_2App.swift; sourceTree = "<group>"; };
 		EAA2E9EE2502486C00B9136C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EAA2E9EF2502486D00B9136C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +93,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA905B2625024B0000126C56 /* Models - Constants */ = {
+			isa = PBXGroup;
+			children = (
+				EA905B2D2502837E00126C56 /* MenuModel.swift */,
+			);
+			path = "Models - Constants";
+			sourceTree = "<group>";
+		};
+		EA905B2A2502834E00126C56 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				EA905B2B2502836800126C56 /* NavigationView.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		EA905B302502893900126C56 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				EA905B3425028AFF00126C56 /* CustomImageView.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		EAA2E9E72502486C00B9136C = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +132,8 @@
 		EAA2E9EC2502486C00B9136C /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				EA905B302502893900126C56 /* Library */,
+				EA905B2625024B0000126C56 /* Models - Constants */,
 				EAA2E9ED2502486C00B9136C /* Juicy_Call_2App.swift */,
 				EAA2E9EE2502486C00B9136C /* ContentView.swift */,
 				EAA2E9EF2502486D00B9136C /* Assets.xcassets */,
@@ -119,7 +155,9 @@
 		EAA2E9F62502486D00B9136C /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				EA905B2A2502834E00126C56 /* Navigation */,
 				EAA2E9F72502486D00B9136C /* Info.plist */,
+				EA905B3A25028EA900126C56 /* BlurView.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -308,8 +346,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA905B2E2502837E00126C56 /* MenuModel.swift in Sources */,
 				EAA2EA182502486D00B9136C /* ContentView.swift in Sources */,
 				EAA2EA162502486D00B9136C /* Juicy_Call_2App.swift in Sources */,
+				EA905B2C2502836800126C56 /* NavigationView.swift in Sources */,
+				EA905B3525028AFF00126C56 /* CustomImageView.swift in Sources */,
+				EA905B3B25028EA900126C56 /* BlurView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +360,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAA2EA192502486D00B9136C /* ContentView.swift in Sources */,
+				EA905B3625028AFF00126C56 /* CustomImageView.swift in Sources */,
 				EAA2EA172502486D00B9136C /* Juicy_Call_2App.swift in Sources */,
+				EA905B2F2502837E00126C56 /* MenuModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
