@@ -1,8 +1,6 @@
 
 import SwiftUI
 
-
-
 struct SideBar: View {
     var Menu = menu
     var body: some View {
@@ -12,6 +10,7 @@ struct SideBar: View {
             }
         }
         .listStyle(SidebarListStyle())
+        .navigationTitle("Juicy Call")
     }
 }
 
