@@ -1,10 +1,3 @@
-//
-//  CustomImageView.swift
-//  Juicy Call 2
-//
-//  Created by Tony Hajdini on 04/09/2020.
-//
-
 import Foundation
 import SwiftUI
 

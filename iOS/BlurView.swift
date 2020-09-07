@@ -1,12 +1,5 @@
-//
-//  BlurView.swift
-//  Juicy Call 2 (iOS)
-//
-//  Created by Tony Hajdini on 04/09/2020.
-//
-
-import Foundation
 //MARK: Blur Effect
+import SwiftUI
 
 struct BlurView: UIViewRepresentable {
     

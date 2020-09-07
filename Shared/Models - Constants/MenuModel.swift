@@ -10,6 +10,6 @@ struct menuModel: Identifiable {
 
 var menu = [
     menuModel(name: "Find a Match", icon: "suit.heart.fill", destination: "findAMatchView", tag: 0),
-    menuModel(name: "Find a Match", icon: "suit.heart.fill", destination: "findAMatchView", tag: 2),
-    menuModel(name: "Find a Match", icon: "suit.heart.fill", destination: "findAMatchView", tag: 3),
+    menuModel(name: "Messages", icon: "message.fill", destination: "messagesView", tag: 1),
+    menuModel(name: "Profile", icon: "person.fill", destination: "profileView", tag: 2)
 ]
