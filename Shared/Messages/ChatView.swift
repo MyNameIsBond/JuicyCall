@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ChatView: View {
+    
     var message = [messages]()
     @State private var mess: String = ""
     @State private var showingActionSheet = false
+    
+    
+    
+    
+    
     var body: some View {
             VStack {
                 ZStack(alignment: .bottom) {
@@ -18,8 +24,12 @@ struct ChatView: View {
                         ScrollView {
                             ForEach(message) { m in
                                 VStack {
-                                    // Message
-                                    Text(m.message).background(Color.accentColor)
+                                    ChatBubble(direction: .right) {
+                                            Text(m.message)
+                                               .padding(10)
+                                               .foregroundColor(Color.white)
+                                               .background(Color.accentColor)
+                                    }.padding(.horizontal,10)
                                 }
                             }.frame(width: g.size.width)
                         }
