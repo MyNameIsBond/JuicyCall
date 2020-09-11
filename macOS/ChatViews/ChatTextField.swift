@@ -7,31 +7,34 @@
 
 import SwiftUI
 
+extension NSTextField { // << workaround !!!
+    open override var focusRingType: NSFocusRingType {
+        get { .none }
+        set { }
+    }
+}
+
 struct ChatTextField: View {
     @State private var mess: String = ""
     var body: some View {
         HStack {
             Button(action: {
-                // code
+                print("hello")
             }, label: {
                 Image(systemName: "plus").foregroundColor(Color.accentColor)
             })
-//                    .actionSheet(isPresented: $showingActionSheet) {
-//                        ActionSheet(title: Text(""), message: Text(""), buttons: [
-//                            .default(Text("Gallery")) {  },
-//                            .default(Text("Camera")) { },
-//                            .default(Text("Blue")) { },
-//                            .cancel()
-//                        ])
-//                    }
-            TextField("Message",text:$mess).padding(5).overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray, lineWidth: 2))
-//                        .background(BlurView(style: .regular)).cornerRadius(20)
+            
+            TextField("Message",text:$mess)
+                .overlay(RoundedRectangle(cornerRadius: 10)
+                .stroke(Color.gray, lineWidth: 1))
+                .cornerRadius(10)
+                
             Button(action: {
-                // To Photo Gallery
             }, label: {
                 Image(systemName: "face.smiling").foregroundColor(Color.accentColor)
             })
-        }.padding(.all)
+        }.padding(.all, 15).background(BlurView(material: NSVisualEffectView.Material.menu, blendingMode: NSVisualEffectView.BlendingMode.withinWindow))
+
     }
 }
 
