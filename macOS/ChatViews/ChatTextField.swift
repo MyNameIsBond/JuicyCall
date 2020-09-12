@@ -23,12 +23,11 @@ struct ChatTextField: View {
             }, label: {
                 Image(systemName: "plus").foregroundColor(Color.accentColor)
             })
-            
-            TextField("Message",text:$mess)
+            TextField("Type a message...",text:$mess)
                 .overlay(RoundedRectangle(cornerRadius: 10)
-                .stroke(Color.gray, lineWidth: 1))
-                .cornerRadius(10)
-                
+                .stroke(Color.gray, lineWidth: 2))
+                .cornerRadius(9)
+                .background(BlurView(material: NSVisualEffectView.Material.toolTip, blendingMode: NSVisualEffectView.BlendingMode.withinWindow))
             Button(action: {
             }, label: {
                 Image(systemName: "face.smiling").foregroundColor(Color.accentColor)
