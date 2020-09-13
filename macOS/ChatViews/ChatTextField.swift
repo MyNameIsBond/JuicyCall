@@ -27,7 +27,6 @@ struct ChatTextField: View {
                 .overlay(RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.gray, lineWidth: 2))
                 .cornerRadius(9)
-                .background(BlurView(material: NSVisualEffectView.Material.toolTip, blendingMode: NSVisualEffectView.BlendingMode.withinWindow))
             Button(action: {
             }, label: {
                 Image(systemName: "face.smiling").foregroundColor(Color.accentColor)

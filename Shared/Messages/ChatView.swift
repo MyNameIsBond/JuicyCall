@@ -13,10 +13,6 @@ struct ChatView: View {
     @State private var mess: String = ""
     @State private var showingActionSheet = false
     
-    
-    
-    
-    
     var body: some View {
             VStack {
                 ZStack(alignment: .bottom) {
@@ -29,7 +25,7 @@ struct ChatView: View {
                                                .padding(10)
                                                .foregroundColor(Color.white)
                                                .background(Color.accentColor)
-                                    }.padding(.horizontal,10)
+                                    }.padding(.horizontal,0)
                                 }
                             }.frame(width: g.size.width)
                             Spacer(minLength: 60)
