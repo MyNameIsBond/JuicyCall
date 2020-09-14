@@ -29,6 +29,7 @@ struct ChatTextField: View {
                 .cornerRadius(9)
             Button(action: {
             }, label: {
+                
                 Image(systemName: "face.smiling").foregroundColor(Color.accentColor)
             })
         }.padding(.all, 15).background(BlurView(material: NSVisualEffectView.Material.menu, blendingMode: NSVisualEffectView.BlendingMode.withinWindow))
