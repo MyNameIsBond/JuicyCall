@@ -1,13 +1,7 @@
-//
-//  ChatTextField.swift
-//  Juicy Call 2 (macOS)
-//
-//  Created by Tony Hajdini on 08/09/2020.
-//
 
 import SwiftUI
 
-extension NSTextField { // << workaround !!!
+extension NSTextField {
     open override var focusRingType: NSFocusRingType {
         get { .none }
         set { }

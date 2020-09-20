@@ -1,17 +1,9 @@
-//
-//  ChatView.swift
-//  Juicy Call 2
-//
-//  Created by Tony Hajdini on 05/09/2020.
-//
 
 import SwiftUI
 
 struct ChatView: View {
     
     var message = [messages]()
-    @State private var mess: String = ""
-    @State private var showingActionSheet = false
     
     var body: some View {
             VStack {

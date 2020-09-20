@@ -1,22 +1,28 @@
 //MARK: Blur Effect
 import SwiftUI
 
-struct BlurView: NSViewRepresentable {
-    var material: NSVisualEffectView.Material.regular
-    var blendingMode: NSVisualEffectView.BlendingMode
+//MARK: Blur Effect
+struct BlurView: UIViewRepresentable {
+    
+    let style: UIBlurEffect.Style
 
-    func makeNSView(context: Context) -> NSVisualEffectView
-    {
-        let visualEffectView = NSVisualEffectView()
-        visualEffectView.material = material
-        visualEffectView.blendingMode = blendingMode
-        visualEffectView.state = NSVisualEffectView.State.active
-        return visualEffectView
+    func makeUIView(context: UIViewRepresentableContext<BlurView>) -> UIView {
+        let view = UIView(frame: .zero)
+        view.backgroundColor = .clear
+        let blurEffect = UIBlurEffect(style: style)
+        let blurView = UIVisualEffectView(effect: blurEffect)
+        blurView.translatesAutoresizingMaskIntoConstraints = false
+        view.insertSubview(blurView, at: 0)
+        NSLayoutConstraint.activate([
+            blurView.heightAnchor.constraint(equalTo: view.heightAnchor),
+            blurView.widthAnchor.constraint(equalTo: view.widthAnchor),
+        ])
+        return view
     }
 
-    func updateNSView(_ visualEffectView: NSVisualEffectView, context: Context)
-    {
-        visualEffectView.material = material
-        visualEffectView.blendingMode = blendingMode
+    func updateUIView(_ uiView: UIView,
+                      context: UIViewRepresentableContext<BlurView>) {
+
     }
+
 }
