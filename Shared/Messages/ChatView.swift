@@ -36,7 +36,6 @@ struct ChatView: View {
                                             .foregroundColor(Color.white)
                                             
                                     }.padding(.horizontal,6).padding(10)
-                                    
                                 }
                             }.frame(width: g.size.width)
                             Spacer(minLength: 60)
