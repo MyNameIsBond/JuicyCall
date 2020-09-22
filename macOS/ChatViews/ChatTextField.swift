@@ -21,11 +21,19 @@ struct ChatTextField: View {
                 .overlay(RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.gray, lineWidth: 2))
                 .cornerRadius(9)
-            Button(action: {
-            }, label: {
-                Image(systemName: "face.smiling").foregroundColor(Color.accentColor)
-            })
-        }.padding(.all, 15).background(BlurView(material: NSVisualEffectView.Material.menu, blendingMode: NSVisualEffectView.BlendingMode.withinWindow))
+            if (mess == "") {
+                Button(action: {
+                }, label: {
+                    Image(systemName: "face.smiling").foregroundColor(Color.accentColor)
+                })
+            } else {
+                Button(action: {
+                }, label: {
+                    Image(systemName: "paperplane.circle.fill")
+                })
+                
+            }
+        }.padding(.all, 15).background(BlurView(material: NSVisualEffectView.Material.menu, blendingMode: NSVisualEffectView.BlendingMode.withinWindow)).animation(.easeOut)
 
     }
 }
