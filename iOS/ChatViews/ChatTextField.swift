@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ChatTextField: View {
+    @State private var mess: String = ""
+    @State private var showingActionSheet: Bool = false
     var body: some View {
         HStack {
             Button(action: {
