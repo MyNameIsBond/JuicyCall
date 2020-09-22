@@ -18,24 +18,6 @@ struct ChatView: View {
                                                .foregroundColor(Color.white)
                                                .background(Color.accentColor)
                                     }.padding(.horizontal,0)
-                                    HStack {
-                                        Spacer()
-                                        Text(m.message)
-                                            .padding(5)
-                                            .background(Color.accentColor)
-                                            .cornerRadius(20)
-                                            .foregroundColor(Color.white)
-                                            
-                                    }.padding(.horizontal,6)
-                                    HStack {
-                                        Spacer()
-                                        Text(m.message)
-                                            .padding(5)
-                                            .background(Color.accentColor)
-                                            .cornerRadius(20)
-                                            .foregroundColor(Color.white)
-                                            
-                                    }.padding(.horizontal,6).padding(10)
                                 }
                             }.frame(width: g.size.width)
                             Spacer(minLength: 60)

@@ -25,15 +25,20 @@ struct ChatTextField: View {
                             .cancel()
                         ])
                     }
-            TextField("Message",text:$mess).padding(5).overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray, lineWidth: 2))
+            TextField("Message",text:$mess).padding(5).overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.gray, lineWidth: 0))
                         .background(BlurView(style: .regular)).cornerRadius(20)
-            Button(action: {
-                // To Photo Gallery
-            }, label: {
-                Image(systemName: "face.smiling").foregroundColor(Color.accentColor)
-            }).buttonStyle(BorderlessButtonStyle())
-        }.padding(.all)
-                .background(BlurView(style: .regular))
+            if mess != "" {
+                Button(action: {
+                    // To Photo Gallery
+                }, label: {
+                    Image(systemName: "paperplane.circle.fill").font(.system(size:30)).foregroundColor(Color.blue)
+                }).buttonStyle(BorderlessButtonStyle())
+            }
+        }
+        .animation(.easeOut)
+        .padding(.all)
+        .background(BlurView(style: .regular))
+        
     }
 }
 

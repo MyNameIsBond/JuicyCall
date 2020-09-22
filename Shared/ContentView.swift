@@ -49,11 +49,13 @@ struct ContentView: View {
     }
     
     var iPhoneTabView: some View {
+        NavigationView {
             TabView(selection: $selection) {
-                    List(Menu) { m in
+                    ForEach(Menu) { m in
                         destionation(dest: m.destination).tabItem {
                             Label(m.name, systemImage: m.icon)
-                    }.tag(selection)
+                        }.tag(m.tag)
+                    }
                 }
             }
         }

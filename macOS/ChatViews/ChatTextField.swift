@@ -16,7 +16,7 @@ struct ChatTextField: View {
                 .overlay(RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.gray, lineWidth: 2))
                 .cornerRadius(9)
-            if (mess != "") {
+            if mess != "" {
                 Button(action: {
                 }, label: {
                     Image(systemName: "paperplane.circle.fill").font(.system(size:20)).foregroundColor(Color.blue)
