@@ -12,6 +12,7 @@ struct MessagesView: View {
     var messages = messageM
     @State var search: String = ""
     var body: some View {
+        NavigationView {
             List(messages) { m in
                     NavigationLink(destination: ChatView(message: m.messages)) {
                         Image(systemName:"circlebadge.fill").opacity(m.read ? 0 : 1.0).foregroundColor(Color.accentColor)
@@ -28,9 +29,15 @@ struct MessagesView: View {
                                 .primaryText()
                         }
                     }.padding(.vertical,8).padding(.horizontal, 0)
-            }.listStyle(DefaultListStyle())
-            .navigationBarTitle("Messages")
+                   
+            }
+            .listStyle(InsetListStyle())
+            
             .navigationTitle("Messages")
+            .navigationBarItems(trailing: Image("user15").imgAvatar(width: 25, height: 25))
+            
+        }
+        
     }
 }
 

@@ -49,7 +49,6 @@ struct ContentView: View {
     }
     
     var iPhoneTabView: some View {
-        NavigationView {
             TabView(selection: $selection) {
                     ForEach(Menu) { m in
                         destionation(dest: m.destination).tabItem {
@@ -57,12 +56,12 @@ struct ContentView: View {
                         }.tag(m.tag)
                     }
                 }
-            }
+        
         }
     
     
     var iPadOSTabView: some View {
-//       LoginFirebase()
+        
         NavigationView {
                 SidebariPadOS()
                     .toolbar {

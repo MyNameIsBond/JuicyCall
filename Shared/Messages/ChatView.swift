@@ -4,7 +4,6 @@ import SwiftUI
 struct ChatView: View {
     
     var message = [messages]()
-    
     var body: some View {
             VStack {
                 ZStack(alignment: .bottom) {
@@ -28,13 +27,13 @@ struct ChatView: View {
                 #else
                 ChatTextField()
                 #endif
+                }
             }
         }
-    }
 }
 
 struct ChatView_Previews: PreviewProvider {
     static var previews: some View {
-        ChatView()
+        ChatView(message: [messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),messages(time: "17:50", message: "Hello", sender: "Tony" ),])
     }
 }

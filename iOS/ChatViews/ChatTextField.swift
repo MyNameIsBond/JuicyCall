@@ -19,9 +19,9 @@ struct ChatTextField: View {
             })
                  .actionSheet(isPresented: $showingActionSheet) {
                         ActionSheet(title: Text(""), message: Text(""), buttons: [
-                            .default(Text("Gallery")) {  },
-                            .default(Text("Camera")) { },
-                            .default(Text("Blue")) { },
+                            .default(Text("Gallery")) {},
+                            .default(Text("Camera")) {},
+                            .default(Text("Blue")) {},
                             .cancel()
                         ])
                     }
@@ -38,7 +38,6 @@ struct ChatTextField: View {
         .animation(.easeOut)
         .padding(.all)
         .background(BlurView(style: .regular))
-        
     }
 }
 
