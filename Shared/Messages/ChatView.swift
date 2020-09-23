@@ -1,6 +1,8 @@
 
 import SwiftUI
 
+
+
 struct ChatView: View {
     
     var message = [messages]()
@@ -22,12 +24,12 @@ struct ChatView: View {
                             Spacer(minLength: 60)
                         }
                     }
-                #if os(iOS)
-                ChatTextField()
-                #else
-                ChatTextField()
-                #endif
-                }
+                    #if os(iOS)
+                    ChatTextField()
+                    #else
+                    ChatTextField()
+                    #endif
+                }.ignoresSafeArea(edges: .bottom)
             }
         }
 }
