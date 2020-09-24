@@ -21,7 +21,7 @@ struct ChatView: View {
                                     }.padding(.horizontal,0)
                                 }
                             }.frame(width: g.size.width)
-                            Spacer(minLength: 60)
+                            Spacer(minLength: (UIApplication.shared.windows.first?.safeAreaInsets.bottom)! + 60 )
                         }
                     }
                     #if os(iOS)
@@ -30,8 +30,11 @@ struct ChatView: View {
                     ChatTextField()
                     #endif
                 }.ignoresSafeArea(edges: .bottom)
-            }
-        }
+            }.onAppear(perform: {
+                Global.tabBar!.isHidden = true
+            })
+    }
+    
 }
 
 struct ChatView_Previews: PreviewProvider {

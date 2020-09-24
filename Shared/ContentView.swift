@@ -6,6 +6,17 @@ struct profileView: View {
     }
 }
 
+struct Global {
+    static var tabBar : UITabBar?
+}
+
+extension UITabBar {
+    override open func didMoveToSuperview() {
+        super.didMoveToSuperview()
+        Global.tabBar = self
+        print("Tab Bar moved to superview")
+    }
+}
 
 struct defaultView: View {
     var body: some View {
@@ -55,7 +66,8 @@ struct ContentView: View {
                             Label(m.name, systemImage: m.icon)
                         }.tag(m.tag)
                     }
-                }
+                    
+            }
         
         }
     

@@ -37,6 +37,7 @@ struct ChatTextField: View {
         }
         .animation(.easeOut)
         .padding(.all)
+        .padding(.bottom, (UIApplication.shared.windows.first?.safeAreaInsets.bottom))
         .background(BlurView(style: .regular))
     }
 }

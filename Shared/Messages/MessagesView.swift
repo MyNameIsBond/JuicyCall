@@ -27,15 +27,14 @@ struct MessagesView: View {
                             }
                             Text(m.messages[0].message)
                                 .primaryText()
-                        }
-                    }.padding(.vertical,8).padding(.horizontal, 0)
-                   
-            }
+                        }.buttonStyle(PlainButtonStyle())
+                    }.padding(.vertical,8).padding(.horizontal, 0).buttonStyle(PlainButtonStyle())
+            }.onAppear(perform: {
+                Global.tabBar!.isHidden = false
+            })
             .listStyle(InsetListStyle())
-            
             .navigationTitle("Messages")
             .navigationBarItems(trailing: Image("user15").imgAvatar(width: 25, height: 25))
-            
         }
         
     }
