@@ -43,7 +43,7 @@ struct SidebariPadOS: View {
                 }
             .listStyle(SidebarListStyle())
             .navigationTitle("Meet Me")
-//            .navigationBarItems(trailing: Image("user15").imgAvatar(width: 30.0, height: 30.0))
+
     }
 }
 

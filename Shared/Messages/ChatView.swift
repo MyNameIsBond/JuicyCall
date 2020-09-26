@@ -29,12 +29,22 @@ struct ChatView: View {
                     #else
                     ChatTextField()
                     #endif
-                }.ignoresSafeArea(edges: .bottom)
-            }.onAppear(perform: {
+                }
+            }.ignoresSafeArea(.container,edges: .bottom)
+            
+            .onAppear(perform: {
                 Global.tabBar!.isHidden = true
             })
+//            .navigationBarItems(trailing: NavigationLink(Image("user13").imgAvatar(width: 25, height: 25), destination: test()))
+        
     }
     
+}
+
+struct test: View {
+    var body: some View {
+        Text("test")
+    }
 }
 
 struct ChatView_Previews: PreviewProvider {

@@ -23,7 +23,6 @@ struct ChatTextField: View {
                 }).buttonStyle(BorderlessButtonStyle())
             }
         }.padding(.all, 15).background(BlurView(material: NSVisualEffectView.Material.menu, blendingMode: NSVisualEffectView.BlendingMode.withinWindow)).animation(.easeOut)
-
     }
 }
 
