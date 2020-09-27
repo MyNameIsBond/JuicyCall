@@ -23,20 +23,33 @@ struct ChatView: View {
                             }.frame(width: g.size.width)
                             Spacer(minLength: (UIApplication.shared.windows.first?.safeAreaInsets.bottom)! + 60 )
                         }
+                    }.navigationBarTitleDisplayMode(.inline)
+                    .navigationBarItems(trailing: Image(systemName: "ellipsis"))
+                    .toolbar {
+                        ToolbarItem(placement: .principal) {
+                            HStack {
+                                Button(action: {
+                                    //code
+                                }, label: {
+                                    Image("user13").imgAvatar(width: 25, height: 25)
+                                    Text("Rafaela").foregroundColor(Color.primary)
+                                })
+                            }
+                        }
                     }
+                    
                     #if os(iOS)
                     ChatTextField()
                     #else
                     ChatTextField()
                     #endif
+                    
                 }
             }.ignoresSafeArea(.container,edges: .bottom)
-            
             .onAppear(perform: {
                 Global.tabBar!.isHidden = true
             })
-//            .navigationBarItems(trailing: NavigationLink(Image("user13").imgAvatar(width: 25, height: 25), destination: test()))
-        
+        //  .navigationBarItems(trailing: NavigationLink(Image("user13").imgAvatar(width: 25, height: 25), destination: test()))
     }
     
 }
