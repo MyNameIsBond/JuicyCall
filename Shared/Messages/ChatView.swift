@@ -2,6 +2,11 @@
 import SwiftUI
 
 
+struct example: View {
+    var body: some View {
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    }
+}
 
 struct ChatView: View {
     
@@ -29,7 +34,7 @@ struct ChatView: View {
                         ToolbarItem(placement: .principal) {
                             HStack {
                                 Button(action: {
-                                    //code
+                                
                                 }, label: {
                                     Image("user13").imgAvatar(width: 25, height: 25)
                                     Text("Rafaela").foregroundColor(Color.primary)
@@ -37,21 +42,17 @@ struct ChatView: View {
                             }
                         }
                     }
-                    
                     #if os(iOS)
                     ChatTextField()
                     #else
                     ChatTextField()
                     #endif
-                    
                 }
             }.ignoresSafeArea(.container,edges: .bottom)
             .onAppear(perform: {
                 Global.tabBar!.isHidden = true
             })
-        //  .navigationBarItems(trailing: NavigationLink(Image("user13").imgAvatar(width: 25, height: 25), destination: test()))
     }
-    
 }
 
 struct test: View {
