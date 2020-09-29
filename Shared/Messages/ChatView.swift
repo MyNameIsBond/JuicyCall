@@ -34,7 +34,7 @@ struct ChatView: View {
                         ToolbarItem(placement: .principal) {
                             HStack {
                                 Button(action: {
-                                
+                                // code
                                 }, label: {
                                     Image("user13").imgAvatar(width: 25, height: 25)
                                     Text("Rafaela").foregroundColor(Color.primary)
