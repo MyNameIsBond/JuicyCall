@@ -21,7 +21,7 @@ struct LibraryTextContent: LibraryContentProvider {
 
 
 
-//MARK: Time Text 
+//MARK: Time Text...
 extension Text {
     func primaryText() -> some View {
         self
