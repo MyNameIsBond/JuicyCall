@@ -6,7 +6,7 @@ struct LibraryTextContent: LibraryContentProvider {
     func subtitleText(base: Text) -> [LibraryItem] {
         LibraryItem(
             base.timeText(),
-            title: "secondary text"
+            title: "Secondary Text"
         )
     }
     @LibraryContentBuilder
@@ -21,7 +21,7 @@ struct LibraryTextContent: LibraryContentProvider {
 
 
 
-//MARK: Time Text...
+//MARK: Time Text..
 extension Text {
     func primaryText() -> some View {
         self
