@@ -6,7 +6,7 @@ struct LibraryTextContent: LibraryContentProvider {
     func subtitleText(base: Text) -> [LibraryItem] {
         LibraryItem(
             base.timeText(),
-            title: "Secondary Text"
+            title: "Secondary Textt"
         )
     }
     @LibraryContentBuilder
@@ -42,3 +42,9 @@ extension Text {
 
 
 
+
+struct CustomText_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
+}
