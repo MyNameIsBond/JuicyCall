@@ -13,7 +13,7 @@ struct LibraryTextContent: LibraryContentProvider {
     func titleText(base: Text) -> [LibraryItem] {
         LibraryItem(
             base.primaryText(),
-            title: "Primary textt"
+            title: "Primary text"
         )
     }
 }
