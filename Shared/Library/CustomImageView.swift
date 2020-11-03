@@ -7,7 +7,7 @@ struct LibraryContent: LibraryContentProvider {
     func modifiers(base: Image) -> [LibraryItem] {
         LibraryItem(
             base.imgAvatar(width: 25.0, height: 25.0),
-            title: "Avatar Circular Imagess"
+            title: "Avatar Circular Images"
         )
     }
     
