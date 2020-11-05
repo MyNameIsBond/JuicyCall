@@ -15,7 +15,7 @@ struct LibraryContent: LibraryContentProvider {
     func mod(base: AnyView) -> [LibraryItem] {
         LibraryItem(
             base.gradientColour(),
-            title: "Gradient Colour Backgourndd"
+            title: "Gradient Colour Backgournd"
         )
     }
 }
