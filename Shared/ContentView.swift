@@ -2,7 +2,7 @@ import SwiftUI
 
 struct profileView: View {
     var body: some View {
-        Text("settingsView")
+        Text("settingsView ")
     }
 }
 
